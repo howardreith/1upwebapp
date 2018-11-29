@@ -8,6 +8,9 @@ export default class FhirCondition extends React.Component {
         <h2 className='primarycolor' style={{display: 'inline-block'}}>
           {this.props.resource.code && this.props.resource.code.coding ? <span>{this.props.resource.code.coding[0].display} {this.props.resource.code.coding[0].code}</span> : this.props.resource.code.text}
         </h2>
+        <h3>
+          {this.props.resource.subject.reference}
+        </h3>
       </div>
     )
   }
